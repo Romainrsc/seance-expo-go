@@ -3,7 +3,7 @@
 ## Lancer l'application (Git Bash, pas PowerShell)
 
 ```
-cd "/c/xampp/htdocs/romain/application-multimédia/urban-eye"
+cd "/c/xampp/htdocs/romain/application-multimédia/seance-13-urban-eye"
 npx expo login      # déjà fait
 npx expo start      # scanner le QR code avec Expo Go
 ```
