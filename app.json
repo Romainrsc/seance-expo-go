@@ -1,15 +1,21 @@
 {
   "expo": {
-    "name": "urban-eye",
-    "slug": "urban-eye",
+    "name": "Urban Eye Romain",
+    "slug": "urban-eye-prof",
+    "owner": "heff-3ti",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "be.heff.urbaneye.prof",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
+      "package": "be.heff.urbaneye.prof",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -19,6 +25,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d8449b64-9f85-44d3-8fed-b8212c9921e0"
+      }
     }
   }
 }
