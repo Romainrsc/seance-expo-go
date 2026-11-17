@@ -47,7 +47,7 @@ src/components/
   Concerts, Captures, Arts  les trois sections
 ```
 
-## Séance 14 : Expo 2, TestFlight et APK (en cours)
+## Séance 14 : Expo 2, TestFlight et APK (terminée)
 
 Objectif : installer l'application **hors d'Expo Go**, grâce à un build EAS. Le professeur a préparé les comptes et la signature. Toute la classe publie dans la même application « Urban Eye 3TI Prof », et chaque étudiant fabrique son propre build.
 
@@ -57,25 +57,14 @@ Objectif : installer l'application **hors d'Expo Go**, grâce à un build EAS. L
 | Projet Expo | `urban-eye-prof` |
 | Identifiant iOS / Android | `be.heff.urbaneye.prof` |
 
-### À faire
+### Fait (Android)
 
-1. **Rejoindre l'organisation** : donner son nom d'utilisateur Expo au professeur et accepter l'invitation (fait : l'équipe `heff-3ti` apparaît sur expo.dev).
-2. **Installer EAS** : `npm install -g eas-cli`, puis `eas login` et `eas whoami`. On doit voir `heff-3ti (Role: Developer)`.
-3. **Donner une identité au projet** (commit avant toute modification) :
-   - `app.json` : `owner` = `heff-3ti`, `slug` = `urban-eye-prof`, `bundleIdentifier` et `package` = `be.heff.urbaneye.prof`, `usesNonExemptEncryption: false`, `extra.eas.projectId`. Le `name` contient son prénom.
-   - `eas.json` : profils `production` (`autoIncrement: true`), `preview` (APK, distribution interne) et `submit.production.ios.ascAppId`.
-   - Vérifier que l'app tourne toujours avec `npx expo start`, puis commit.
-4. **Build iPhone** (un seul build à la fois pour la classe) :
-   ```bash
-   eas build --platform ios --profile production --auto-submit --no-wait --message "Prénom"
-   ```
-   À la question sur le compte Apple, répondre `n`. Noter le `Build number`. Compter 5 à 30 minutes de traitement Apple.
-5. **Installer sur iPhone** : app TestFlight, lien public de la classe, puis choisir son build.
-6. **Build Android** :
-   ```bash
-   eas build --platform android --profile preview --no-wait --message "Prénom"
-   ```
-   Puis télécharger et installer l'APK depuis la page du build (`expo.dev`, projet `urban-eye-prof`, onglet Builds).
+- [x] Organisation `heff-3ti` rejointe, `eas-cli` installé, `eas whoami` affiche `heff-3ti (Role: Developer)`
+- [x] `app.json` (owner, slug, identifiants, `usesNonExemptEncryption: false`, `projectId`) et `eas.json` (`production`, `preview`, `ascAppId`) créés
+- [x] Build Android : `eas build --platform android --profile preview --no-wait --message "Romain"`
+- [x] APK téléchargé depuis la page du build et installé sur le téléphone : « Urban Eye Romain »
+
+Le build iPhone (`--profile production --auto-submit`, TestFlight) n'a pas été fait, faute d'iPhone.
 
 ### Notions
 
